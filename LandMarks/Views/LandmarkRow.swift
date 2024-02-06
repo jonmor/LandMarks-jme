@@ -19,7 +19,9 @@ struct LandmarkRow: View {
                 .frame(width: 50, height: 50)
             Text(landmark.name)
             Spacer()
-            Text(landmark.state)
+            if landmark.isFavorite {
+                Image(systemName: "star.fill").foregroundStyle(.yellow)
+            }
         }
     }
 }
